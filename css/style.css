@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #26dee4;
+}
+.random__play,
+.random__modal,
+.random__modal__game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.random__play {
+  display: none;
+  gap: 20px;
+  background-color: #5334d1;
+  border-radius: 18px;
+  width: 450px;
+  height: 300px;
+  color: #fff;
+  box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+}
+button {
+  background-color: aqua;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+}
+input {
+  border-radius: 8px;
+  font-size: 24px;
+}
+.random__modal {
+  width: 450px;
+  height: 300px;
+  border-radius: 18px;
+  background-color: rgb(82, 78, 208);
+  color: #fff;
+  gap: 10px;
+  box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+}
+.random__modal__btn {
+  padding: 8px 10px 8px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+select {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.random__modal__title {
+  color: rgb(237, 202, 77);
+}
+.random__word {
+  font-size: 28px;
+  color: rgb(233, 143, 10);
+}
+.random__play__title {
+  font-size: 26px;
+}
+.random__time__text {
+  font-size: 26px;
+}
+.randoom__scroe__text {
+  font-size: 26px;
+}
+.random__modal__game-over {
+  display: none;
+  width: 350px;
+  height: 200px;
+  border-radius: 18px;
+  background-color: rgb(45, 102, 236);
+  gap: 20px;
+  box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 2px 18px 0px rgba(0, 0, 0, 0.75);
+}
+.random__game-over__title {
+  color: rgb(238, 0, 0);
+}
+.random__game-over__level {
+  color: rgb(255, 242, 4);
+  font-size: 24px;
+}
+.random__game-over__score {
+  color: rgba(6, 255, 151, 0.997);
+  font-size: 24px;
+}
+.random__scroe {
+}
