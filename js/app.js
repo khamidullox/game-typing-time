@@ -13,6 +13,7 @@ let socerGameOver = document.querySelector(".random__scroe__game-over");
 let globalWord;
 let number = 0;
 let timeNumber = 10;
+let level = "easy";
 timeText.style.color = "rgb(2, 251, 56)";
 
 function randomWordFun() {
@@ -28,6 +29,14 @@ input.addEventListener("input", () => {
     input.value = "";
     number++;
     scroe.textContent = number;
+    if (level == "easy") {
+      timeNumber += 5;
+    } else if (level == "medium") {
+      timeNumber += 3;
+    } else {
+      timeNumber += 2;
+    }
+
     new Audio("../music/deClick.mp3").play();
   }
 });
@@ -42,7 +51,7 @@ modalBtn.addEventListener("click", () => {
   let timeSet = setInterval(() => {
     timeNumber--;
     time.textContent = timeNumber;
-    if (timeNumber < 10 && timeNumber >= 7) {
+    if (timeNumber > 10 && timeNumber >= 7) {
       timeText.style.color = "rgb(2, 251, 56)";
     } else if (timeNumber < 7 && timeNumber >= 4) {
       timeText.style.color = "gold";
@@ -67,19 +76,5 @@ modalBtn.addEventListener("click", () => {
   }, 1000);
 });
 select.addEventListener("change", () => {
-  if (select.value == "easy") {
-  } else if (select.value == "medium") {
-    console.log("medium");
-  } else if (select.value == "hard") {
-    console.log("hard");
-  }
+  level = select.value;
 });
-
-// if (select.value == "easy") {
-//       console.log("medium");
-
-// } else if (select.value == "medium") {
-//   console.log("medium");
-// } else if (select.value == "hard") {
-//   console.log("hard");
-// }
