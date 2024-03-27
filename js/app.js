@@ -8,7 +8,7 @@ let timeText = document.querySelector(".random__time__text");
 let modalBtn = document.querySelector(".random__modal__btn");
 let modalGameOver = document.querySelector(".random__modal__game-over");
 let select = document.querySelector("#random__level");
-let opteion = document.querySelector("option");
+let levelGameOver = document.querySelector(".random__game-over__level-span");
 let socerGameOver = document.querySelector(".random__scroe__game-over");
 let globalWord;
 let number = 0;
@@ -32,9 +32,9 @@ input.addEventListener("input", () => {
     if (level == "easy") {
       timeNumber += 5;
     } else if (level == "medium") {
-      timeNumber += 3;
+      timeNumber += 4;
     } else {
-      timeNumber += 2;
+      timeNumber += 3;
     }
 
     new Audio("../music/deClick.mp3").play();
@@ -77,4 +77,5 @@ modalBtn.addEventListener("click", () => {
 });
 select.addEventListener("change", () => {
   level = select.value;
+  levelGameOver.textContent = select.value;
 });
